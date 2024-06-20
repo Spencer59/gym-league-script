@@ -1,3 +1,5 @@
 # gym-league-script
 
-https://github.com/Lucasfin000/Orbit-UI-Library
+ this is for the ui https://github.com/Lucasfin000/Orbit-UI-Library
+
+to load it in the game you need this! local lib = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Lucasfin000/Orbit-UI-Library/main/Library", true))()
