@@ -21,26 +21,35 @@ local Window = Rayfield:CreateWindow({
    }
 })
  --[[
- local Legs = 
+ local Legs = = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Shoulder(or any muscle).APercentage
  local Biceps = 
  local Forearm =
  local Abs =
  local Calves =
  local Chest =
  local Triceps =
- local Shoulders =
+ local Shoulders = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Shoulder(or any muscle).APercentage
  local Back =
- local Auto Farm = --check for if the body alter buy button is visable in the stat menue then set getgenv true\
- local Legs text =
- local Biceps text =
- local Forearm text =
- local Abs text =
- local Calves text =
- local Chest text =
- local Triceps text =
- local Shoulders text =
- local Back text =
-
+local body_ulter_buy = game.players.local blah blah
+ local body_ulter_buy_text = body_ulter_buy.Visable-- the buy body ulter button in stats
+ local Legs_text =
+ local Biceps_text =
+ local Forearm_text =
+ local Abs_text =
+ local Calves_text =
+ local Chest_text =
+ local Triceps_text =
+ local Shoulders_text =
+ local Back_text =
+ local Auto_Farm_Legs_value=
+ local Auto_Farm_
+ local Auto_Farm_
+ local Auto_Farm_
+ local Auto_Farm_
+ local Auto_Farm_
+ local Auto_Farm_
+ local Auto_Farm_
+ local Auto_Farm_
 values = local player(imput your muscle) = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Shoulder(or any muscle).APercentage
 value 2 = local (imput muscle name) text = (imput your muscle).Text [will make it imput as string]
 value 3 = local (imput body alter name) = 
@@ -54,18 +63,66 @@ if local auto farm == true then fire action or click button for body alter
  ]]
 
    --]] 
-if Legs text = 100% then
 
-getgenv().Auto_Farm = false
-getgenv().Legs = false
-getgenv().Biceps = false
-getgenv().Forearm = false
-getgenv().Abs = false
-getgenv().Calves = false
-getgenv().Chest = false
-getgenv().Triceps = false
-getgenv().Shoulders = false
-getgenv().Back = false
+
+   local body_ulter_buy = game.players.LocalPlayer blah blah --the visability of the button
+   local body_ulter_buy_text = body_ulter_buy.Visable-- the buy body ulter button in stats
+   local unlock_gym = game.players.LocalPlayer blah blah -- the visability of the 
+   local unlock_gym_text = unlock_gym.Visable -- the visability of the Text "unlock new gym"
+   
+   local Legs_mucles = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Legs.APercentage
+   local Legs_text = Legs_mucles.Text
+
+    if Legs_text == 100% function ()
+        _G.Legs_value = false
+    end then
+end
+
+if _G.Legs_value == true then
+    
+end
+
+    if body_ulter_buy_text == true then
+    _G().Auto_Farm = true
+end
+
+    if unlock_gym_text == true then
+    _G().New_Gym = true
+end
+
+    if Legs_text == 0% - 5% function ()
+        _G().Auto_Farm_Legs = true
+    end then
+end
+
+
+_G.Auto_Farm_Legs = false 
+_G.New_Gym = false
+_G.Auto_Farm = false
+_G.Legs_value = false
+_G.Biceps = false
+_G.Forearm = false
+_G.Abs = false
+_G.Calves = false
+_G.Chest = false
+_G.Triceps = false
+_G.Shoulders = false
+_G.Back = false
+
+while _G().Auto_Farm_Legs == true do
+    print ("This is crazy!") -- tping to the different machines based on your world 
+end
+
+while _G().Auto_Farm == true do
+    print("This is Nice!") --will fire all of the body ulter butons if they exists
+end
+
+while _G().New_Gym == true do
+    print("This is awsome!") -- will fire the teliport button on the gym gui
+end
+
+
+
 
 local Tab = Window:CreateTab("Main", 4483362458)
 
@@ -75,8 +132,13 @@ local Toggle = Tab:CreateToggle({
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
    -- The function that takes place when the toggle is pressed
+
+   -- auto buying body ulters
+   if body_ulter_buy_text == true then
+    _G().Auto_Farm = true
+end
    -- base function[[
-   -- if Shoulder text == 100% then
+   -- if Shoulder_text == 100% then
       -- make tp script to it goes to the other mascines
    --]]
     -- The prosess of getting the values of all of the different body parts, making sure that they all have the same value, then fireing the body ulter action
@@ -94,6 +156,15 @@ local Toggle = Tab:CreateToggle({
    -- The variable (Value) is a boolean on whether the toggle is true or false
    end,
 })
+
+
+local Button = Tab:CreateButton({
+    Name = "Load Litux",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/cool83bidcarfly02six/LightuxSolaraSup/main/README.md'))()
+    -- The function that takes place when the button is pressed
+    end,
+ })
 
 local Input = Tab:CreateInput({
    Name = "Input Example",
