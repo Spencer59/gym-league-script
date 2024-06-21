@@ -64,8 +64,8 @@ if local auto farm == true then fire action or click button for body alter
 
    --]] 
 
-
-   local body_ulter_buy = game.players.LocalPlayer blah blah --the visability of the button
+--[[
+local body_ulter_buy = game.players.LocalPlayer blah blah --the visability of the button
    local body_ulter_buy_text = body_ulter_buy.Visable-- the buy body ulter button in stats
    local unlock_gym = game.players.LocalPlayer blah blah -- the visability of the 
    local unlock_gym_text = unlock_gym.Visable -- the visability of the Text "unlock new gym"
@@ -100,6 +100,8 @@ end
 	_G().Auto_Farm_Biceps = true
 end
 
+]]
+   
 
 _G.Auto_Farm_Legs = false
 _G.Auto_Farm_Biceps = false
@@ -114,7 +116,7 @@ _G.Chest = false
 _G.Triceps = false
 _G.Shoulders = false
 _G.Back = false
-
+--[[
 while _G().Auto_Farm_Legs == true do
     print ("This is crazy!") -- tping to the different machines based on your world 
 end
@@ -126,6 +128,8 @@ end
 while _G().New_Gym == true do
     print("This is awsome!") -- will fire the teliport button on the gym gui
 end
+]]
+
 
 
 
@@ -140,7 +144,7 @@ local Toggle = Tab:CreateToggle({
    -- The function that takes place when the toggle is pressed
 
    -- auto buying body ulters
-   if body_ulter_buy_text == true then
+   --[[if body_ulter_buy_text == true then
     _G().Auto_Farm = true
 end
    -- base function[[
