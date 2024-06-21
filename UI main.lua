@@ -20,7 +20,7 @@ local Window = Rayfield:CreateWindow({
       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-
+--[[
 local Legs = 
 local Biceps = 
 local Forearm =
@@ -30,17 +30,51 @@ local Chest =
 local Triceps =
 local Shoulders =
 local Back =
+local Auto Farm = 
+]]
+
 
 getgenv().Auto_Farm = false
-
-local Auto Farm = 
+getgenv().Legs = false
+getgenv().Biceps = false
+getgenv().Forearm = false
+getgenv().Abs = false
+getgenv().Calves = false
+getgenv().Chest = false
+getgenv().Triceps = false
+getgenv().Shoulders = false
+getgenv().Back = false
 
 local Tab = Window:CreateTab("Main", 4483362458)
 
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Farm body",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+    -- The prosess of getting the values of all of the different body parts, making sure that they all have the same value, then fireing the body ulter action
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+  
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Train",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- auto fireing the value of clicking for different mshines
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
 
-local Button = Tab:CreateButton({
-   Name = "Auto Farm",
-   Callback = function()
-   -- The prosess of getting the values of all of the different body parts, making sure that they all have the same value, then fireing the body ulter action
+local Input = Tab:CreateInput({
+   Name = "Input Example",
+   PlaceholderText = "Input Placeholder",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+   -- The function that takes place when the input is changed
+   -- The variable (Text) is a string for the value in the text box
    end,
 })
