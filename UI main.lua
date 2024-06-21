@@ -129,9 +129,13 @@ while _G().New_Gym == true do
     print("This is awsome!") -- will fire the teliport button on the gym gui
 end
 ]]
+if unlock_gym_text == true then
+    _G().New_Gym = true
+end
 
-
-
+while _G().New_Gym == true do
+    print("This is awsome!") -- will fire the teliport button on the gym gui
+end
 
 
 local Tab = Window:CreateTab("Main", 4483362458)
@@ -171,7 +175,7 @@ local Toggle = Tab:CreateToggle({
 local Button = Tab:CreateButton({
     Name = "Load Litux",
     Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/cool83birdcarfly02six/LightuxSolaraSup/main/README.md'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/cool83birdcarfly02six/LightuxSolaraSup/main/README.md'))()
     -- The function that takes place when the button is pressed
     end,
  })
