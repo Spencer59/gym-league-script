@@ -105,7 +105,7 @@ end
 
 _G.Auto_Farm_Legs = false
 _G.Auto_Farm_Biceps = false
-_G.New_Gym = false
+_G.New_Gym = true
 _G.Auto_Farm = false
 _G.Legs_value = false
 _G.Biceps = false
