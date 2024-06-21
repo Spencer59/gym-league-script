@@ -78,6 +78,9 @@ if local auto farm == true then fire action or click button for body alter
     end then
 end
 
+	if Biceps_text == 100% funtion ()
+	_G.
+
 if _G.Legs_value == true then
     
 end
@@ -90,13 +93,16 @@ end
     _G().New_Gym = true
 end
 
-    if Legs_text == 0% - 5% function ()
+    if Legs_text >= 0% and Legs_text <= 5% function ()
         _G().Auto_Farm_Legs = true
     end then
+	if Biceps_text >= 0% and Biceps_text <= 5% function ()
+	_G().Auto_Farm_Biceps = true
 end
 
 
-_G.Auto_Farm_Legs = false 
+_G.Auto_Farm_Legs = false
+_G.Auto_Farm_Biceps = false
 _G.New_Gym = false
 _G.Auto_Farm = false
 _G.Legs_value = false
