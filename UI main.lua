@@ -105,7 +105,7 @@ end
 
 _G.Auto_Farm_Legs = false
 _G.Auto_Farm_Biceps = false
-_G.New_Gym = true
+_G.New_Gym = false
 _G.Auto_Farm = false
 _G.Legs_value = false
 _G.Biceps = false
@@ -125,15 +125,13 @@ while _G().Auto_Farm == true do
     print("This is Nice!") --will fire all of the body ulter butons if they exists
 end
 
-while _G().New_Gym == true do
+while _G.New_Gym == true do
     print("This is awsome!") -- will fire the teliport button on the gym gui
 end
 ]]
 
 
-while _G.New_Gym == true do
-    print("This is awsome!") -- will fire the teliport button on the gym gui
-end
+
 
 
 local Tab = Window:CreateTab("Main", 4483362458)
