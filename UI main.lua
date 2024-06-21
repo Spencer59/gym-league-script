@@ -20,10 +20,27 @@ local Window = Rayfield:CreateWindow({
       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
+
+local Legs = 
+local Biceps = 
+local Forearm =
+local Abs =
+local Calves =
+local Chest =
+local Triceps =
+local Shoulders =
+local Back =
+
+getgenv().Auto_Farm = false
+
+local Auto Farm = 
+
 local Tab = Window:CreateTab("Main", 4483362458)
+
+
 local Button = Tab:CreateButton({
    Name = "Auto Farm",
    Callback = function()
-   -- The function that takes place when the button is pressed
+   -- The prosess of getting the values of all of the different body parts, making sure that they all have the same value, then fireing the body ulter action
    end,
 })
