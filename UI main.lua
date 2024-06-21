@@ -129,9 +129,7 @@ while _G().New_Gym == true do
     print("This is awsome!") -- will fire the teliport button on the gym gui
 end
 ]]
-if unlock_gym_text == true then
-    _G().New_Gym = true
-end
+
 
 while _G().New_Gym == true do
     print("This is awsome!") -- will fire the teliport button on the gym gui
