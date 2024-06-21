@@ -31,6 +31,14 @@ local Triceps =
 local Shoulders =
 local Back =
 local Auto Farm = 
+
+values = local player(imput your muscle) = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Shoulder(or any muscle).APercentage
+value 2 = local (imput muscle name) text = (imput your muscle).Text [will make it imput as string]
+value 3 = local (imput body alter name) = 
+
+
+make a new if statment for the alter equips like
+if body alter equiped == true then click the button for that gym (line 37)
 ]]
 
 
@@ -53,6 +61,10 @@ local Toggle = Tab:CreateToggle({
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
    -- The function that takes place when the toggle is pressed
+   -- base function[[
+   -- if Shoulder text == 100% then
+      -- make tp script to it goes to the other mascines
+   --]]
     -- The prosess of getting the values of all of the different body parts, making sure that they all have the same value, then fireing the body ulter action
    -- The variable (Value) is a boolean on whether the toggle is true or false
    end,
