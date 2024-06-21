@@ -171,7 +171,7 @@ local Toggle = Tab:CreateToggle({
 local Button = Tab:CreateButton({
     Name = "Load Litux",
     Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/cool83bidcarfly02six/LightuxSolaraSup/main/README.md'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/cool83birdcarfly02six/LightuxSolaraSup/main/README.md'))()
     -- The function that takes place when the button is pressed
     end,
  })
