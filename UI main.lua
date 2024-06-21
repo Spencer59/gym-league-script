@@ -30,15 +30,18 @@ local Chest =
 local Triceps =
 local Shoulders =
 local Back =
-local Auto Farm = 
+local Auto Farm = --check for if the body alter buy button is visable in the stat menue then set getgenv true
 
 values = local player(imput your muscle) = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Shoulder(or any muscle).APercentage
 value 2 = local (imput muscle name) text = (imput your muscle).Text [will make it imput as string]
 value 3 = local (imput body alter name) = 
+value 4 = 
 
 
-make a new if statment for the alter equips like
-if body alter equiped == true then click the button for that gym (line 37)
+make a new if statment for the alter equips like (later) (click the button for that gym (line 37))
+
+an if statment for if all of the body parts = 100% then call the body alter button
+if local auto farm == true then fire action or click button for body alter
 ]]
 
 
