@@ -131,7 +131,7 @@ end
 ]]
 
 
-while _G().New_Gym == true do
+while _G.New_Gym == true do
     print("This is awsome!") -- will fire the teliport button on the gym gui
 end
 
