@@ -20,17 +20,26 @@ local Window = Rayfield:CreateWindow({
       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
---[[
-local Legs = 
-local Biceps = 
-local Forearm =
-local Abs =
-local Calves =
-local Chest =
-local Triceps =
-local Shoulders =
-local Back =
-local Auto Farm = --check for if the body alter buy button is visable in the stat menue then set getgenv true
+ --[[
+ local Legs = 
+ local Biceps = 
+ local Forearm =
+ local Abs =
+ local Calves =
+ local Chest =
+ local Triceps =
+ local Shoulders =
+ local Back =
+ local Auto Farm = --check for if the body alter buy button is visable in the stat menue then set getgenv true\
+ local Legs text =
+ local Biceps text =
+ local Forearm text =
+ local Abs text =
+ local Calves text =
+ local Chest text =
+ local Triceps text =
+ local Shoulders text =
+ local Back text =
 
 values = local player(imput your muscle) = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Shoulder(or any muscle).APercentage
 value 2 = local (imput muscle name) text = (imput your muscle).Text [will make it imput as string]
@@ -42,8 +51,10 @@ make a new if statment for the alter equips like (later) (click the button for t
 
 an if statment for if all of the body parts = 100% then call the body alter button
 if local auto farm == true then fire action or click button for body alter
-]]
+ ]]
 
+   --]] 
+if Legs text = 100% then
 
 getgenv().Auto_Farm = false
 getgenv().Legs = false
