@@ -105,7 +105,7 @@ end
 
 _G.Auto_Farm_Legs = false
 _G.Auto_Farm_Biceps = false
-_G.New_Gym = false
+_G.New_Gym = true
 _G.Auto_Farm = false
 _G.Legs_value = false
 _G.Biceps = false
@@ -171,7 +171,9 @@ local Toggle = Tab:CreateToggle({
 local Button = Tab:CreateButton({
     Name = "Load Litux",
     Callback = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/cool83birdcarfly02six/LightuxSolaraSup/main/README.md'))()
+        while _G.New_Gym == true do
+            print("This is awsome!") -- will fire the teliport button on the gym gui
+        end
     -- The function that takes place when the button is pressed
     end,
  })
