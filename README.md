@@ -11,3 +11,6 @@ https://docs.sirius.menu/rayfield
 
 load string that goes at the top:
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+Really good dark dex with script viewer:
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/Lazy_Dex.lua"))()
