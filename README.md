@@ -17,3 +17,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scrip
 
 sclora injection thing might work:
 https://pastebin.com/raw/eKuLr55U
+
+script dumper thing:
+https://github.com/Stefanuk12/ROBLOX/blob/master/Other/ScriptDumper.lua
