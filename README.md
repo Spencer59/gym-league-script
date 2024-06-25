@@ -20,3 +20,6 @@ https://pastebin.com/raw/eKuLr55U
 
 script dumper thing:
 https://github.com/Stefanuk12/ROBLOX/blob/master/Other/ScriptDumper.lua
+
+hydox thing:
+https://github.com/Upbolt/Hydroxide
