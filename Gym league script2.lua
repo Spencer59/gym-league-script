@@ -106,6 +106,22 @@ local Legs = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Sta
 local Legs_text = Legs.Text
 local Stamina = game.Players.LocalPlayer blah blah
 local Stamina_text = Stamina.Text
+local Biceps = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Biceps.APercentage
+local Biceps_text = Biceps.Text
+local Forearm = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Forearm.APercentage
+local Forearm_text = Forearm.Text
+local Abs = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Abs.APercentage
+local Abs_text = Abs.Text
+local Calves = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Calves.APercentage
+local Calves_text = Calves.Text
+local Chest = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Chest.APercentage
+local Chest_text = Chest.Text
+local Triceps = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Triceps.APercentage
+local Triceps_text = Triceps.Text
+local Shoulders = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Shoulders.APercentage
+local Shoulders_text = Shoulders.Text
+local Back = game.Players.LocalPlayer.PlayerGui.Frames.Stats.Main.MuscleList.Stats.Back.APercentage
+local Back_text = Back.Text
 
 
 
@@ -114,10 +130,9 @@ _G.Auto_Farm_Chest = false
 _G.Auto_Farm_Triceps = false
 _G.Auto_Farm_Back = false
 _G.Auto_Farm_Abs = false
-_G.Auto_Farm_Legs = false
 _G.Auto_Farm_Shoulders = false
 _G.Auto_Farm_Biceps = false
-_G.New_Gym = true
+_G.New_Gym = false
 _G.Auto_Farm = false
 _G.Legs_value = false
 _G.Biceps = false
@@ -129,7 +144,9 @@ _G.Triceps = false
 _G.Shoulders = false
 _G.Back = false
 _G.Auto_Clicker = false
-_G.
+_G.Leave_Equipment = false
+
+
 --[[
 while _G().Auto_Farm_Legs == true do
     print ("This is crazy!") -- tping to the different machines based on your world 
@@ -155,9 +172,32 @@ local Toggle = Tab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-_G.Auto_Farm_Legs = true
+_G.Auto_Farm_Done = false
 
-while true do
+if _G.Auto_Farm_Done == false then
+    _G.Auto_Alter = false
+    _G.New_Gym = false
+end
+if Alter_text == 100% then
+    _G.Auto_Farm_Done = true
+    _G.Auto_Farm_start = false
+end
+end
+if not Alter_text == 100% then
+    _G.Auto_Farm_Done = false
+    _G.Auto_Farm_start = true
+end
+
+if _G.Auto_Farm_start == true then
+    _G.Auto_Farm_Legs = true
+end
+
+if _G.Auto_Clicker == true then
+    print ("I'm clicking!") -- this is going to be the action of clickig while ona machine
+end 
+
+
+while _G.Auto_Farm_start == true do
     if Stamina_text == 20% function() --make the stamina text so that it is taking it from a percentage
         _G.Auto_Farm_Forearm = false
         _G.Auto_Farm_Chest = false
@@ -170,15 +210,7 @@ while true do
         _G.Auto_Clicker = false
             end then
         if Stamina_text == 100% function ()
-        _G.Auto_Farm_Forearm = true
-        _G.Auto_Farm_Chest = true
-        _G.Auto_Farm_Triceps = true
-        _G.Auto_Farm_Back = true
-        _G.Auto_Farm_Abs = true
-        _G.Auto_Farm_Legs = true
-        _G.Auto_Farm_Shoulders = true
-        _G.Auto_Farm_Biceps = true
-        _G().Auto_Clicker = true
+        _G.Auto_Farm_start = true
                 end then
             end
         end
@@ -191,19 +223,28 @@ end
 while _G().Auto_Farm_Legs == true do
     wait(1)
     if not Legs_text == 100% function ()
---  make it so it calls a (_G(). = true) so that I can use their tp script to it get on the other mascines
-   _G.Auto_Clicker = true 
+    _G.Legs_Tp = true --  make it so it calls a (_G(). = true) so that I can use their tp script to it get on the other mascines
+   _G.Auto_Clicker = true
 end then
     wait(1)
     if Legs_text == 100% function ()
--- make tp script to it go to the other mascines and get on the mascine
+_G.Leave_Equipment = true
+wait(1)
 _G().Auto_Clicker = false
 _G().Auto_Farm_Biceps = true
-        end then
+wait(1)
+_G.Auto_Farm_Legs = false
+            end then
+        end
     end
-end   
-
-
+end
+if _G.Leave_Equipment == true then
+    wait(1)
+    -- fire the leave function that I have in the other github script
+end  
+if _G.Legs_Tp == true then
+    wait(1)
+    -- tp script
 end
 
 
@@ -212,49 +253,191 @@ end
 
 while _G().Auto_Farm_Biceps == true do
     if Bicep_text == 100% function ()
-        
+        _G.Auto_Clicker = false
+        _G.Leave_Equipment = true
+        wait(1)
+        _G.Auto_Farm_Abs = true
+        wait(1)
+        _G.Auto_Farm_Biceps = false
     end then
+    if not Bicep_text == 100% function ()
+        _G.Legs_Tp = false
+        _G.Leave_Equipment = false
+        _G.Bicep_Tp = true
+        _G.Auto_Clicker = true
+        end then
+    end
 end
 
-   
+if _G.Bicep_Tp == true then
+    wait(1)
+    -- tp script
+end
+
+while _G.Auto_Farm_Abs == true do
+    if not Abs_text == 100% function ()
+        _G.Leave_Equipment = false
+        wait(1)
+        _G.Abs_Tp = true
+        _G.Bicep_Tp = false 
+        _G.Auto_Clicker = true
+    end then
+        if Abs_text == 100% function ()
+        _G.Auto_Clicker = false
+        _G.Leave_Equipment = true
+        wait(1)
+        _G.Auto_Farm_Shoulders = true
+        wait(1)
+        _G.Auto_Farm_Abs = false
+            end then
+        end
+    end
+end
+
+if _G.Abs_Tp == true then
+    wait(1)
+    -- tp script
+end
+
+while _G.Auto_Farm_Shoulders == true do
+    if not Shoulders_text == 100% function ()
+        _G.Leave_Equipment = false
+        wait(1)
+        _G.Shoulders_Tp = true
+        _G.Abs_Tp = false 
+        _G.Auto_Clicker = true
+    end then
+        if Shoulders_text == 100% function ()
+        _G.Auto_Clicker = false
+        _G.Leave_Equipment = true
+        wait(1)
+        _G.Auto_Farm_Back = true
+        wait(1)
+        _G.Auto_Farm_Shoulders = false
+            end then
+        end
+    end
+end
+
+if _G.Shoulders_Tp then
+    wait(1)
+    --tp script
+end
+
+while _G.Auto_Farm_Back == true do
+    if not Back_text == 100% function ()
+        _G.Leave_Equipment = false
+        wait(1)
+        _G.Back_Tp = true
+        _G.Bicep_Tp = false 
+        _G.Auto_Clicker = true
+    end then
+        if Back_text == 100% function ()
+        _G.Auto_Clicker = false
+        _G.Leave_Equipment = true
+        wait(1)
+        _G.Auto_Farm_Triceps = true
+        wait(1)
+        _G.Auto_Farm_Back = false
+            end then
+        end
+    end
+end
+
+if _G.Back_Tp == true then
+    wait(1)
+    -- tp script 
+end
+
+while _G.Auto_Farm_Triceps == true do
+    if not Triceps_text == 100% function ()
+        _G.Leave_Equipment = false
+        wait(1)
+        _G.Triceps_Tp = true
+        _G.Back_Tp = false 
+        _G.Auto_Clicker = true
+    end then
+        if Triceps_text == 100% function ()
+        _G.Auto_Clicker = false
+        _G.Leave_Equipment = true
+        wait(1)
+        _G.Auto_Farm_Chest = true
+        wait(1)
+        _G.Auto_Farm_Triceps = false
+            end then
+        end
+    end
+end
+    if _G.Triceps_Tp == true then
+        wait(1)
+        --tp script
+    end
+    
+    while _G.Auto_Farm_Chest == true do
+        if not Chest_text == 100% function ()
+            _G.Leave_Equipment = false
+            wait(1)
+            _G.Chest_Tp = true
+            _G.Triceps_Tp = false 
+            _G.Auto_Clicker = true
+        end then
+            if Chest_text == 100% function ()
+            _G.Auto_Clicker = false
+            _G.Leave_Equipment = true
+            wait(1)
+            _G.Auto_Farm_Forearm = true
+            wait(1)
+            _G.Auto_Farm_Chest = false
+                end then
+            end
+        end
+    end
+
+if _G.Chest_Tp == true then
+    wait(1)
+    --tp script
+end
+
+    
+while _G.Auto_Farm_Forearm == true do
+    if not Forearm_text == 100% function ()
+        _G.Leave_Equipment = false
+        wait(1)
+        _G.Forearm_Tp = true
+        _G.Chest_Tp = false 
+        _G.Auto_Clicker = true
+    end then
+        if Forearm_text == 100% function ()
+        _G.Auto_Clicker = false
+        _G.Leave_Equipment = true
+        wait(1)
+        _G.Auto_Farm_Done = true
+        wait(1)
+        _G.Auto_Farm_Forearm = false
+            end then
+        end
+    end
+
+if _G.Forearm_Tp == true then
+    wait(1)
+    --tp script
+end
+
+if _G.Auto_Farm_Done == true then
+    _G.Auto_Farm_start = false
+    _G.Auto_Alter = true
+    _G.New_Gym = true
+end
 
 
-    if _G().Auto_Farm_Legs ==
-    
-    
-    
-    
-    
-    while _G().Auto_Farm == true do
+
+    while _G().Auto_Alter == true do
         print("This is Nice!") --will fire all of the body ulter butons if they exists
     end
     
     while _G.New_Gym == true do
         print("This is awsome!") -- will fire the teliport button on the gym gui
     end
-  
-  
-  
-  
-  
-  
-  
-    -- The function that takes place when the toggle is pressed
-
-   -- auto buying body ulters
-   --[[if body_ulter_buy_text == true then
-    _G().Auto_Farm = true
-end
-   -- base function[[
-   -- if Shoulder_text == 100% then
-      -- make tp script to it goes to the other mascines
-
-   --]]
-    -- The prosess of getting the values of all of the different body parts, making sure that they all have the same value, then fireing the body ulter action
-   -- The variable (Value) is a boolean on whether the toggle is true or false
-
-
-
 
    end,
 })
