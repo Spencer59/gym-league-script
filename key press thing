@@ -1,0 +1,58 @@
+-- ModuleScript (InputHandler)
+local InputHandler = {}
+
+function InputHandler:BindKeys()
+    local UserInputService = game:GetService("UserInputService")
+
+    UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+        if gameProcessedEvent then
+            return
+        end
+
+        if input.UserInputType == Enum.UserInputType.Keyboard then
+            self:HandleKeyPress(input.KeyCode)
+        end
+    end)
+
+    UserInputService.InputEnded:Connect(function(input, gameProcessedEvent)
+        if gameProcessedEvent then
+            return
+        end
+
+        if input.UserInputType == Enum.UserInputType.Keyboard then
+            self:HandleKeyRelease(input.KeyCode)
+        end
+    end)
+end
+
+function InputHandler:HandleKeyPress(keyCode)
+    if keyCode == Enum.KeyCode.W then
+        print("W key was pressed")
+    elseif keyCode == Enum.KeyCode.A then
+        print("A key was pressed")
+    elseif keyCode == Enum.KeyCode.S then
+        print("S key was pressed")
+    elseif keyCode == Enum.KeyCode.D then
+        print("D key was pressed")
+    end
+end
+
+function InputHandler:HandleKeyRelease(keyCode)
+    if keyCode == Enum.KeyCode.W then
+        print("W key was released")
+    elseif keyCode == Enum.KeyCode.A then
+        print("A key was released")
+    elseif keyCode == Enum.KeyCode.S then
+        print("S key was released")
+    elseif keyCode == Enum.KeyCode.D then
+        print("D key was released")
+    end
+end
+
+function InputHandler:SimulateKeyPress(keyCode)
+    self:HandleKeyPress(keyCode)
+    wait(0.1) -- simulate a short press duration
+    self:HandleKeyRelease(keyCode)
+end
+
+return InputHandler
