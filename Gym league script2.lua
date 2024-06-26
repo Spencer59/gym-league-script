@@ -55,6 +55,8 @@ value 2 = local (imput muscle name) text = (imput your muscle).Text [will make i
 value 3 = local (imput body alter name) = 
 value 4 = 
 
+leave function =game:GetService("ReplicatedStorage"):WaitForChild("common"):WaitForChild("packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.5.1"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("EquipmentService"):WaitForChild("RF"):WaitForChild("Leave"):InvokeServer()
+
 
 make a new if statment for the alter equips like (later) (click the button for that gym (line 37))
 
