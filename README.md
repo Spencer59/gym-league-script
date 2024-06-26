@@ -32,4 +32,28 @@ local Params = {
 local synsaveinstance = loadstring(game:HttpGet(Params.RepoURL .. Params.SSI .. ".luau", true), Params.SSI)()
 local Options = {decomptype: custom} -- Documentation here https://luau.github.io/UniversalSynSaveInstance/api/SynSaveInstance
 synsaveinstance(Options)
+user input code:
+
+
+
+    local UserInputService = game:GetService("UserInputService")
+
+    UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+        if gameProcessedEvent then
+            return
+        end
+
+        if input.KeyCode == Enum.KeyCode.W then
+            print("W key was pressed")
+        elseif input.KeyCode == Enum.KeyCode.A then
+            print("A key was pressed")
+        elseif input.KeyCode == Enum.KeyCode.S then
+            print("S key was pressed")
+        elseif input.KeyCode == Enum.KeyCode.D then
+            print("D key was pressed")
+        end
+    end)
+end
+
+
 
