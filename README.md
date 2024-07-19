@@ -56,4 +56,8 @@ user input code:
 end
 
 
+This should be a key code:
+https://synapsexdocs.github.io/custom-lua-functions/keyboard-mouse-functions/
+
+
 
